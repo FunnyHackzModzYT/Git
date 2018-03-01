@@ -1,0 +1,17 @@
+  const Discord = require("discord.js");
+
+  module.exports.run = async (bot, message, args) => {
+  	let statsembed = new Discord.RichEmbed()
+	.setColor("#00ffff")
+	.setThumbnail(bicon)
+	.addField("Users", bot.users.size true)
+	.addField("Servers", bot.servers.size, true)
+	.addField("Channels", bot.channels.size, true)    .setTimestamp()
+
+	return message.channel.send(statsembed);
+	//bot.user.sendMessage('FunnyHackz&ModzYT#3804', 'botinfo command used');
+}
+
+module.exports.help = {
+  name: "botstats"
+}
